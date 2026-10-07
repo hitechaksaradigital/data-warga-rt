@@ -4,6 +4,7 @@ import { useWargaKK } from '../hooks/useWargaKK'
 import { FilterSelect, WargaRow } from './datawarga/parts'
 import { ProfileDrawer } from './datawarga/ProfileDrawer'
 import { AddKKModal } from './datawarga/AddKKModal'
+import DemografiChart from './datawarga/DemografiChart'
 
 export default function DataWargaPage() {
   const { rows, loading, error, source, addKK } = useWargaKK()
@@ -152,27 +153,7 @@ export default function DataWargaPage() {
         </div>
         {drawerOpen && <ProfileDrawer warga={selected} onClose={() => setSelectedId(null)} />}
       </div>
-      <div className="mt-space-xl p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
-        <div className="flex items-center gap-space-md">
-          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-            <span className="material-symbols-outlined text-[28px]">query_stats</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-headline-sm text-headline-sm text-on-surface font-semibold">Komposisi Penduduk RT 05</span>
-            <span className="font-body-sm text-body-sm text-on-surface-variant">Laki-laki: 178 jiwa (51%) • Perempuan: 170 jiwa (49%) • Warga Usia Produktif: 74%</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-space-md w-full md:w-auto">
-          <div className="flex flex-col items-end">
-            <span className="font-label-sm text-label-sm text-outline">Kelengkapan e-KTP Lingkungan</span>
-            <span className="font-headline-sm text-headline-sm text-primary font-bold">98.2%</span>
-          </div>
-          <div className="w-36 h-3 bg-surface-container rounded-full overflow-hidden flex">
-            <div className="bg-primary h-full" style={{ width: '98%' }}></div>
-            <div className="bg-error h-full" style={{ width: '2%' }}></div>
-          </div>
-        </div>
-      </div>
+      <DemografiChart />
       <AddKKModal open={modalOpen} onClose={() => setModalOpen(false)} onSubmit={addKK} />
     </div>
   )
