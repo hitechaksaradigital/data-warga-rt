@@ -56,7 +56,7 @@ export const WARGA_KK = [
   },
   {
     id: 'ratna',
-    nama: 'Dra. Ratna Kusuma',
+    nama: 'Dra. Ratna Kusuma di EDIT',
     noKK: 'KK 3271018809920008',
     noKKPlain: '3271018809920008',
     blok: 'Blok A3 No. 7',

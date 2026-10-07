@@ -1,27 +1,31 @@
 import { useMemo, useState } from 'react'
-import { WARGA_KK, WARGA_TABS } from '../data/warga'
+import { WARGA_TABS } from '../data/warga'
+import { useWargaKK } from '../hooks/useWargaKK'
 import { FilterSelect, WargaRow } from './datawarga/parts'
 import { ProfileDrawer } from './datawarga/ProfileDrawer'
+import { AddKKModal } from './datawarga/AddKKModal'
 
 export default function DataWargaPage() {
+  const { rows, loading, error, source, addKK } = useWargaKK()
   const [tab, setTab] = useState('semua')
   const [search, setSearch] = useState('')
   const [kepemilikan, setKepemilikan] = useState('')
   const [rentan, setRentan] = useState('')
-  const [selectedId, setSelectedId] = useState('ratna')
+  const [selectedId, setSelectedId] = useState(null)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
-    return WARGA_KK.filter((w) => {
+    return rows.filter((w) => {
       if (tab !== 'semua' && !w.kategori.includes(tab)) return false
       if (kepemilikan && w.kepemilikan !== kepemilikan) return false
       if (rentan && !w.kategori.includes(rentan)) return false
       if (q && !`${w.nama} ${w.noKK} ${w.noKKPlain} ${w.blok}`.toLowerCase().includes(q)) return false
       return true
     })
-  }, [tab, search, kepemilikan, rentan])
+  }, [rows, tab, search, kepemilikan, rentan])
 
-  const selected = WARGA_KK.find((w) => w.id === selectedId) || null
+  const selected = rows.find((w) => w.id === selectedId) || null
   const drawerOpen = selected !== null
 
   return (
@@ -47,12 +51,23 @@ export default function DataWargaPage() {
             <span>Import / Export Excel</span>
             <span className="material-symbols-outlined text-[16px] text-outline">expand_more</span>
           </button>
-          <button className="inline-flex items-center gap-space-xs px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 active:scale-[0.99] transition-all shadow-md" onClick={() => setSelectedId('ratna')} type="button">
+          <button className="inline-flex items-center gap-space-xs px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 active:scale-[0.99] transition-all shadow-md" onClick={() => setModalOpen(true)} type="button">
             <span className="material-symbols-outlined text-[20px]">person_add</span>
             <span>Tambah Data KK Baru</span>
           </button>
         </div>
       </div>
+      {source === 'lokal' && (
+        <div className="mb-space-md p-3 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center gap-2">
+          <span className="material-symbols-outlined text-[18px]">info</span>
+          <span>Mode data lokal — isi VITE_SUPABASE_URL &amp; VITE_SUPABASE_ANON_KEY di .env lalu jalankan SQL di folder supabase/ untuk mengaktifkan database.</span>
+        </div>
+      )}
+      {error && (
+        <div className="mb-space-md p-3 rounded-xl bg-error-container text-on-error-container font-label-md text-label-md">
+          Gagal memuat Supabase ({error}) — menampilkan data lokal.
+        </div>
+      )}
       <div className="flex flex-col gap-space-md mb-space-lg">
         <div className="flex items-center gap-space-xs overflow-x-auto pb-2">
           {WARGA_TABS.map((t) => {
@@ -95,7 +110,7 @@ export default function DataWargaPage() {
             <div className="px-space-lg py-4 flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-space-sm">
                 <span className="font-headline-sm text-headline-sm text-on-surface font-semibold">Daftar Induk Kepala Keluarga (KK)</span>
-                <span className="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Menampilkan {filtered.length} dari 94 KK</span>
+                <span className="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Menampilkan {filtered.length} KK • Sumber: {source === 'supabase' ? 'Supabase' : 'Lokal'}</span>
               </div>
               <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
                 <span className="material-symbols-outlined text-[16px] text-primary">sync</span>
@@ -117,10 +132,15 @@ export default function DataWargaPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface">
-                  {filtered.map((w) => (
+                  {loading && (
+                    <tr>
+                      <td colSpan={8} className="py-10 px-4 text-center text-on-surface-variant">Memuat data dari Supabase...</td>
+                    </tr>
+                  )}
+                  {!loading && filtered.map((w) => (
                     <WargaRow key={w.id} warga={w} onShow={setSelectedId} />
                   ))}
-                  {filtered.length === 0 && (
+                  {!loading && filtered.length === 0 && (
                     <tr>
                       <td colSpan={8} className="py-10 px-4 text-center text-on-surface-variant">Tidak ada data yang cocok dengan filter.</td>
                     </tr>
@@ -153,6 +173,7 @@ export default function DataWargaPage() {
           </div>
         </div>
       </div>
+      <AddKKModal open={modalOpen} onClose={() => setModalOpen(false)} onSubmit={addKK} />
     </div>
   )
 }

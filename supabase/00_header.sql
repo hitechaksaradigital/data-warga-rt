@@ -1,0 +1,5 @@
+-- ============================================================
+-- WargaNet RT 05 — Skema Database Supabase
+-- Jalankan file ini di Supabase Dashboard > SQL Editor.
+-- Urutan: 01_enums, 02_kk, 03_members, 04_rls, 05_seed
+-- ============================================================
