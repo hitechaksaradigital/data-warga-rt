@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { NAV_ITEMS } from '../data/dashboard'
 
 export default function Sidebar({ query, setQuery }) {
@@ -50,20 +51,18 @@ export default function Sidebar({ query, setQuery }) {
             </span>
           </div>
           {NAV_ITEMS.map((item) => (
-            <a
+            <NavLink
               key={item.path}
-              aria-current={item.active ? 'page' : undefined}
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className={
-                item.active
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
                   ? 'flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm'
                   : 'flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-body-md font-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors'
               }
             >
               <span className="material-symbols-outlined text-[20px]">{item.icon}</span>
               <span>{item.label}</span>
-            </a>
+            </NavLink>
           ))}
         </nav>
       </div>

@@ -1,8 +1,8 @@
 export const NAV_ITEMS = [
-  { label: 'Dashboard Utama', icon: 'grid_view', path: 'dashboard-utama', active: true },
-  { label: 'Data Warga & KK', icon: 'groups', path: 'data-warga-kk', active: false },
-  { label: 'Keuangan & Iuran', icon: 'account_balance_wallet', path: 'keuangan-iuran', active: false },
-  { label: 'Layanan & Pengaduan', icon: 'assignment_late', path: 'layanan-pengaduan', active: false },
+  { label: 'Dashboard Utama', icon: 'grid_view', path: 'dashboard-utama', to: '/', active: true },
+  { label: 'Data Warga & KK', icon: 'groups', path: 'data-warga-kk', to: '/data-warga', active: false },
+  { label: 'Keuangan & Iuran', icon: 'account_balance_wallet', path: 'keuangan-iuran', to: '/keuangan', active: false },
+  { label: 'Layanan & Pengaduan', icon: 'assignment_late', path: 'layanan-pengaduan', to: '/layanan', active: false },
 ]
 
 export const SURAT_ANTRIAN = [

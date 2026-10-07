@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { NAV_ITEMS } from '../data/dashboard'
 
 export default function MobileDrawer({ open, onClose, query, setQuery }) {
@@ -24,10 +25,10 @@ export default function MobileDrawer({ open, onClose, query, setQuery }) {
               <span className="font-label-sm text-label-sm text-outline uppercase tracking-wider">Menu Administrasi</span>
             </div>
             {NAV_ITEMS.map((item) => (
-              <a key={item.path} href="#" onClick={(e) => { e.preventDefault(); onClose() }} className={item.active ? 'flex items-center gap-space-sm px-space-md py-2.5 bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm' : 'flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high'}>
+              <NavLink key={item.path} to={item.to} onClick={onClose} className={({ isActive }) => isActive ? 'flex items-center gap-space-sm px-space-md py-2.5 bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm' : 'flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high'}>
                 <span className="material-symbols-outlined text-[20px]">{item.icon}</span>
                 <span>{item.label}</span>
-              </a>
+              </NavLink>
             ))}
           </nav>
         </div>

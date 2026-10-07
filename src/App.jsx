@@ -1,47 +1,31 @@
-import { useMemo, useState } from 'react'
-import Sidebar from './components/Sidebar'
-import MobileDrawer from './components/MobileDrawer'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import StatCards from './components/StatCards'
-import ActionCenter from './components/ActionCenter'
-import FinanceSummary from './components/FinanceSummary'
-import RondaSchedule from './components/RondaSchedule'
-import EmergencyContacts from './components/EmergencyContacts'
-import SearchResults from './components/SearchResults'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Layout from './components/Layout'
+import DashboardPage from './pages/DashboardPage'
+import DataWargaPage from './pages/DataWargaPage'
 
-export default function App() {
-  const [drawerOpen, setDrawerOpen] = useState(false)
-  const [query, setQuery] = useState('')
-
-  const searching = useMemo(() => query.trim().length > 0, [query])
-
+function Placeholder({ title }) {
   return (
-    <div className="min-h-screen bg-surface">
-      <Sidebar query={query} setQuery={setQuery} />
-      <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} query={query} setQuery={setQuery} />
-
-      <div className="lg:pl-72 flex flex-col min-h-screen">
-        <Header onMenu={() => setDrawerOpen(true)} />
-        <main className="relative pt-20 w-full min-h-screen bg-surface px-4 md:px-space-margin pb-space-xl">
-          <div className="flex flex-col w-full gap-y-space-lg pt-space-md">
-            <Hero />
-            <StatCards />
-            {searching ? (
-              <SearchResults query={query} onClear={() => setQuery('')} />
-            ) : (
-              <>
-                <ActionCenter />
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
-                  <FinanceSummary />
-                  <RondaSchedule />
-                </div>
-                <EmergencyContacts />
-              </>
-            )}
-          </div>
-        </main>
+    <div className="pt-space-md">
+      <div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+        <h1 className="font-headline-lg text-headline-lg text-on-surface">{title}</h1>
+        <p className="font-body-md text-body-md text-on-surface-variant mt-1">Halaman ini belum diimplementasikan. Kembali ke Dashboard atau Data Warga.</p>
       </div>
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<DashboardPage />} />
+          <Route path="data-warga" element={<DataWargaPage />} />
+          <Route path="keuangan" element={<Placeholder title="Keuangan & Iuran" />} />
+          <Route path="layanan" element={<Placeholder title="Layanan & Pengaduan" />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
