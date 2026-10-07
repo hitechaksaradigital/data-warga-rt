@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#b32827","on-primary-fixed-variant":"#00504f","background":"#fff8f7","inverse-on-surface":"#ffedeb","on-primary-container":"#003938","surface-tint":"#006a69","error":"#ba1a1a","error-container":"#ffdad6","on-secondary":"#ffffff","on-error":"#ffffff","inverse-primary":"#68d8d6","outline":"#6d7979","on-surface":"#410004","on-secondary-container":"#746332","surface-container-lowest":"#ffffff","surface-dim":"#ffcfcb","on-primary":"#ffffff","on-secondary-fixed":"#241a00","surface-variant":"#ffdad7","outline-variant":"#bcc9c8","surface-container-low":"#fff0ef","primary-fixed-dim":"#68d8d6","on-primary-fixed":"#002020","secondary-fixed-dim":"#dbc58b","tertiary-fixed":"#ffdad6","on-surface-variant":"#3d4949","secondary-container":"#f8e0a4","on-error-container":"#93000a","primary":"#006a69","tertiary-fixed-dim":"#ffb4ac","on-tertiary-container":"#6b0007","inverse-surface":"#611113","surface":"#fff8f7","on-background":"#410004","surface-bright":"#fff8f7","primary-container":"#31aaa9","on-tertiary-fixed":"#410003","on-tertiary-fixed-variant":"#900a12","secondary-fixed":"#f8e0a4","surface-container-high":"#ffe2df","secondary":"#6e5d2d","primary-fixed":"#86f4f3","on-tertiary":"#ffffff","surface-container":"#ffe9e7","surface-container-highest":"#ffdad7","tertiary-container":"#ff695f","on-secondary-fixed-variant":"#544518"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","space-md":"1rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.5rem"},fontFamily:{"label-lg":["Inter"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"label-sm":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="RT Digital Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UqqjXiJzHlqkQGXuo5Gwka2mI55J7wgaYZ2R6UqKQuHEX2cR2tWi4dJeviwkQtEkCbwb3GvTkH_qJaM8Ct56IQPrK5STmAP9lg33ZSPo1mjboJb8bboU93GQ-5ha0mqMxHKN3OBlTaGyCkR_Kj90z0nui6goEXupZyraNe5zIRKXzd9DH9hZOjyRjasQ-rfiengjE7xNeQI3-4DHBK0ScatiM-XwulyANBywgJHgl5Ig"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">WargaNet RT 05</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">RW 08 Harmoni Sejahtera</span></div></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span><span class="font-label-sm text-label-sm text-on-surface-variant">Periode Aktif</span></div><span class="font-label-md text-label-md text-primary">Mei 2024</span></div></div><div class="px-space-md mt-space-xs"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Cari warga, KK, iuran..." type="text"/></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><div class="px-space-sm pb-1"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Menu Administrasi</span></div><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-body-md font-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-utama" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard Utama</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-body-md font-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="data-warga-kk" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Data Warga &amp; KK</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-body-md font-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="keuangan-iuran" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Keuangan &amp; Iuran</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="layanan-pengaduan" href="#"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span>Layanan &amp; Pengaduan</span></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="bg-error-container p-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-error text-[20px]">emergency</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-error-container font-bold">Hotline Darurat</span><span class="font-body-sm text-body-sm text-on-error-container">Siaga Kamling 24 Jam</span></div></div><a class="bg-error text-on-error px-2.5 py-1 rounded-full text-label-sm font-label-lg hover:opacity-90 transition-opacity" href="tel:112">Panggil</a></div><div class="mt-space-sm text-center"><span class="font-label-sm text-label-sm text-outline">v2.4 • RT Digital 05 Harmoni</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-primary transition-colors cursor-pointer">Portal RT 05</span><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="text-on-surface font-semibold">Harmoni Sejahtera</span></nav><div class="hidden xl:flex items-center gap-space-xs ml-space-md px-space-sm py-1 bg-secondary-container rounded-full"><span class="material-symbols-outlined text-on-secondary-container text-[16px]">verified</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Kas Aktif &amp; Terverifikasi</span></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold">3</span></button><div class="h-8 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Bpk. H. Bambang Sutrisno</span><span class="font-label-sm text-label-sm text-on-surface-variant">Ketua RT 05</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtRbA2lPDUgiXZ4-VQRnCImsqfg14gUyfacpQ4HQpcYX359ooduS0TZFg-jp-CWkfuIJ_1wZGuiBAelaxhYDPy-hT4lFR5NxaNcLZieRw5tAEQziGylmDeaFfM4Sxil7LOKda5Yeh4F3LUhsrpfgAdbESxM6KhH4LWXezr-WXhaiF5Gmrqoq-NBsG8Queon_yDAgKdL643m16lwmPFkyaDBy1nBhGl8txOXw8ag70-"/></div></div></header><main class="relative pt-20 w-full min-h-screen bg-surface px-space-margin pb-space-xl"><div class="flex flex-col w-full">
+<!-- Module Sub-Header & Live Metric Bar -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary via-primary-container to-secondary-container p-space-lg text-on-primary shadow-md">
+<div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs text-on-primary/90 font-label-sm text-label-sm tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Sistem Tata Kelola RT 05 / RW 08 Mandiri</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-surface-container-lowest">
+          Pelayanan Administrasi Warga, Surat Pengantar &amp; Papan Pengaduan
+        </h1>
+<p class="font-body-md text-body-md text-surface-container-low max-w-2xl">
+          Pusat terintegrasi pelayanan persuratan digital, tindak lanjut keluhan infrastruktur warga, serta koordinasi keamanan kamling terpadu.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest/15 backdrop-blur-md p-space-sm rounded-xl">
+<div class="flex flex-col items-center px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-surface-container-lowest">5</span>
+<span class="font-label-sm text-label-sm text-surface-container-low">Surat Baru</span>
+</div>
+<div class="w-px h-8 bg-surface-container-lowest/30"></div>
+<div class="flex flex-col items-center px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-secondary-container">3</span>
+<span class="font-label-sm text-label-sm text-surface-container-low">Aduan Aktif</span>
+</div>
+<div class="w-px h-8 bg-surface-container-lowest/30"></div>
+<div class="flex flex-col items-center px-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-surface-container-lowest">100%</span>
+<span class="font-label-sm text-label-sm text-surface-container-low">SLA Layanan</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Segment Tabs -->
+<div class="mt-space-md bg-surface-container-lowest rounded-xl p-space-xs shadow-sm flex flex-wrap gap-space-xs items-center">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm transition-all duration-200" id="tabBtn1" onclick="switchModuleTab('surat')">
+<span class="material-symbols-outlined text-[18px]">mark_email_unread</span>
+<span>Pengajuan Surat Pengantar</span>
+<span class="ml-1 bg-surface-container-lowest/25 text-surface-container-lowest text-[11px] font-bold px-2 py-0.5 rounded-full">5</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-lg text-label-lg transition-all duration-200" id="tabBtn2" onclick="switchModuleTab('pengaduan')">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>Pengaduan &amp; Aspirasi Lingkungan</span>
+<span class="ml-1 bg-error-container text-on-error-container text-[11px] font-bold px-2 py-0.5 rounded-full">3</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-lg text-label-lg transition-all duration-200" id="tabBtn3" onclick="switchModuleTab('jadwal')">
+<span class="material-symbols-outlined text-[18px]">event_note</span>
+<span>Papan Pengumuman &amp; Jadwal Ronda</span>
+<span class="ml-1 bg-secondary-container text-on-secondary-container text-[11px] font-bold px-2 py-0.5 rounded-full">Pekan Ini</span>
+</button>
+</div>
+<!-- ================= SUB-MODUL 1: PERMOHONAN SURAT PENGANTAR ONLINE ================= -->
+<div class="mt-space-lg flex flex-col gap-space-lg" id="sectionSurat">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- List Permohonan Antrean Surat (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Antrean Surat Masuk</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Klik permohonan untuk pratinjau dokumen resmi</p>
+</div>
+<span class="bg-surface-container px-space-sm py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Terbaru: 10 mnt lalu</span>
+</div>
+<div class="flex flex-col gap-space-sm" id="letterQueueList">
+<!-- Item 1: Active Selected -->
+<div class="letter-card cursor-pointer bg-surface-container-lowest p-space-md rounded-xl shadow-sm ring-2 ring-primary transition-all duration-150" onclick="selectLetter(this, 'dimas')">
+<div class="flex items-start justify-between gap-2">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Surat Pengantar KTP Baru</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">a.n. Dimas Pratama</p>
+<span class="font-label-sm text-label-sm text-outline">Blok A2 No. 3 • NIK: 3175081903990001</span>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container text-label-sm font-label-sm px-2.5 py-1 rounded-full whitespace-nowrap">
+                Menunggu Verifikasi
+              </span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="letter-card cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all duration-150" onclick="selectLetter(this, 'siti')">
+<div class="flex items-start justify-between gap-2">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">home_work</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Surat Keterangan Domisili</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">a.n. Siti Rahma</p>
+<span class="font-label-sm text-label-sm text-outline">Blok B4 No. 10 • NIK: 3275015502940003</span>
+</div>
+</div>
+<span class="bg-surface-container text-tertiary text-label-sm font-label-sm px-2.5 py-1 rounded-full whitespace-nowrap font-semibold">
+                Menunggu TTD RT
+              </span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="letter-card cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all duration-150" onclick="selectLetter(this, 'reza')">
+<div class="flex items-start justify-between gap-2">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Surat Pengantar Nikah (N1-N4)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">a.n. Reza Pahlevi</p>
+<span class="font-label-sm text-label-sm text-outline">Blok C2 No. 5 • NIK: 3175021208920004</span>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-label-sm px-2.5 py-1 rounded-full whitespace-nowrap font-semibold">
+                Siap Dicetak
+              </span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="letter-card cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all duration-150" onclick="selectLetter(this, 'sktm')">
+<div class="flex items-start justify-between gap-2">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Surat Ket. Tidak Mampu (SKTM)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">a.n. Mbah Warsito</p>
+<span class="font-label-sm text-label-sm text-outline">Blok D1 No. 02 • Keperluan Beasiswa Cucu</span>
+</div>
+</div>
+<span class="bg-primary-container/20 text-primary text-label-sm font-label-sm px-2.5 py-1 rounded-full whitespace-nowrap font-bold">
+                Disetujui
+              </span>
+</div>
+</div>
+</div>
+<!-- Syarat Lampiran Berkas Uploaded Box -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Kelengkapan Berkas Pemohon:</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">3 Dokumen Valid</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-lowest p-2 rounded-lg flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">photo_camera_front</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Scan KTP Lama</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">receipt_long</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Kartu Keluarga</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Lunas Kas RT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Preview Surat Otomatis Standar RT (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Panel Pratinjau Dokumen Resmi</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary font-mono text-label-sm px-2.5 py-1 rounded-md font-semibold">
+              Format: Permendagri No. 18/2018
+            </span>
+</div>
+</div>
+<!-- The Formal Document Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between min-h-[560px] relative overflow-hidden">
+<!-- Watermark RT Background -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.03]">
+<span class="font-headline-xl text-[180px] font-bold text-primary select-none">RT 05</span>
+</div>
+<!-- Document Content Area -->
+<div class="relative z-10 flex flex-col">
+<!-- Kop Surat -->
+<div class="flex items-center gap-space-md pb-space-md border-b-2 border-on-surface">
+<img alt="Logo RT" class="w-16 h-16 object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UqqjXiJzHlqkQGXuo5Gwka2mI55J7wgaYZ2R6UqKQuHEX2cR2tWi4dJeviwkQtEkCbwb3GvTkH_qJaM8Ct56IQPrK5STmAP9lg33ZSPo1mjboJb8bboU93GQ-5ha0mqMxHKN3OBlTaGyCkR_Kj90z0nui6goEXupZyraNe5zIRKXzd9DH9hZOjyRjasQ-rfiengjE7xNeQI3-4DHBK0ScatiM-XwulyANBywgJHgl5Ig"/>
+<div class="flex flex-col text-center flex-1">
+<span class="font-headline-sm text-headline-sm font-bold tracking-wider text-on-surface">RUKUN TETANGGA 05 / RUKUN WARGA 08</span>
+<span class="font-headline-md text-headline-md font-extrabold text-primary">KELURAHAN HARMONI SEJAHTERA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sekretariat: Balai Warga RT 05, Jl. Cendrawasih Raya No. 12 • Surel: rt05.harmoni@warganet.id</span>
+</div>
+</div>
+<!-- Judul & No Surat -->
+<div class="text-center my-space-md">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface underline tracking-wide" id="docTitle">
+                SURAT PENGANTAR PERMOHONAN KTP
+              </h3>
+<p class="font-label-md text-label-md text-on-surface-variant font-mono mt-0.5" id="docNumber">
+                Nomor: 045/RT05-RW08/V/2024
+              </p>
+</div>
+<!-- Body Surat -->
+<div class="space-y-space-sm text-on-surface font-body-md text-body-md">
+<p>Yang bertanda tangan di bawah ini, Ketua RT 05 RW 08 Kelurahan Harmoni Sejahtera, menerangkan dengan sebenarnya bahwa:</p>
+<div class="bg-surface-container-low/50 p-space-sm rounded-lg grid grid-cols-1 md:grid-cols-3 gap-y-1.5 text-body-sm font-body-sm">
+<span class="text-outline font-medium">Nama Lengkap</span>
+<span class="md:col-span-2 font-bold text-on-surface" id="docName">: DIMAS PRATAMA</span>
+<span class="text-outline font-medium">Nomor Induk Kependudukan</span>
+<span class="md:col-span-2 font-mono text-on-surface" id="docNik">: 3175081903990001</span>
+<span class="text-outline font-medium">Tempat, Tanggal Lahir</span>
+<span class="md:col-span-2 text-on-surface" id="docTtl">: Jakarta, 19 Maret 1999</span>
+<span class="text-outline font-medium">Jenis Kelamin / Agama</span>
+<span class="md:col-span-2 text-on-surface">: Laki-laki / Islam</span>
+<span class="text-outline font-medium">Alamat Domisili Tetap</span>
+<span class="md:col-span-2 text-on-surface" id="docAlamat">: Blok A2 No. 3, RT 05 RW 08</span>
+<span class="text-outline font-medium">Maksud / Keperluan</span>
+<span class="md:col-span-2 font-semibold text-primary" id="docKeperluan">: Pengurusan KTP Baru / Perekaman Biometrik Kelurahan</span>
+</div>
+<p class="pt-space-xs text-body-sm text-on-surface">
+                Demikian surat pengantar ini dibuat dengan sesungguhnya untuk dapat dipergunakan sebagaimana mestinya oleh instansi yang bersangkutan.
+              </p>
+</div>
+<!-- Signature & QR Section -->
+<div class="mt-space-lg grid grid-cols-2 gap-space-md items-end pt-space-sm">
+<!-- QR Code Verifikasi Digital -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-sm rounded-xl">
+<!-- Inline SVG QR Code Generator Mockup -->
+<svg class="w-16 h-16 shrink-0 bg-surface-container-lowest p-1 rounded-lg" fill="currentColor" viewbox="0 0 100 100">
+<path class="text-on-surface" d="M10 10h30v30h-30zM15 15v20h20v-20z M60 10h30v30h-30zM65 15v20h20v-20z M10 60h30v30h-30zM15 65v20h20v-20z M20 20h10v10h-10z M70 20h10v10h-10z M20 70h10v10h-10z M60 60h10v10h-10z M80 60h10v10h-10z M70 70h10v10h-10z M60 80h20v10h-20z M80 80h10v10h-10z M45 10h10v25h-10z M45 45h10v10h-10z M10 45h25v10h-25z M45 65h10v25h-10z M65 45h25v10h-25z"></path>
+</svg>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">E-Verification RT</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Pindai untuk cek keabsahan surat di server RW 08</span>
+<span class="font-mono text-[10px] text-primary mt-1">HASH: 9A8F-045V-RT05</span>
+</div>
+</div>
+<!-- Tanda Tangan Digital Ketua RT -->
+<div class="flex flex-col items-center text-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jakarta, 20 Mei 2024</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Ketua RT 05 Harmoni Sejahtera</span>
+<!-- Digital Signature Graphic Mock -->
+<div class="h-14 flex items-center justify-center my-1">
+<svg class="h-10 w-36 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 150 40">
+<path d="M10 25 C 25 10, 30 35, 45 15 C 55 5, 60 30, 75 20 C 90 10, 95 38, 110 18 C 120 10, 135 22, 145 15" stroke-linecap="round"></path>
+<path d="M25 32 C 40 33, 80 34, 120 30" stroke-linecap="round"></path>
+</svg>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface underline">Bpk. H. Bambang Sutrisno</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">NIP. W-05.08.2021.001</span>
+</div>
+</div>
+</div>
+<!-- Action Button Toolbar -->
+<div class="relative z-10 pt-space-md mt-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-space-md py-2.5 rounded-lg flex items-center gap-space-xs shadow-sm transition-all duration-150" onclick="approveLetterAlert()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Setujui &amp; Terbitkan Surat</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg px-space-md py-2.5 rounded-lg flex items-center gap-space-xs transition-colors" onclick="printLetterAlert()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Cetak PDF Resmi</span>
+</button>
+</div>
+<button class="bg-[#1b6b6a] hover:bg-primary text-surface-container-lowest font-label-lg text-label-lg px-space-md py-2.5 rounded-lg flex items-center gap-space-xs shadow-sm transition-all" onclick="sendWhatsappAlert()">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Kirim Salinan via WhatsApp</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= SUB-MODUL 2: PAPAN PENGADUAN FASILITAS LINGKUNGAN ================= -->
+<div class="mt-space-lg flex flex-col gap-space-md" id="sectionPengaduan">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Papan Pengaduan &amp; Keluhan Fasilitas Warga</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Laporan kerusakan fasilitas umum dengan koordinasi tanggap darurat RT</p>
+</div>
+<button class="self-start md:self-auto bg-tertiary text-on-tertiary px-space-md py-2 rounded-lg font-label-lg text-label-lg flex items-center gap-2 shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">add_alert</span>
+<span>Buat Tiket Tindak Lanjut</span>
+</button>
+</div>
+<!-- 3 Card Aduan Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xs">
+<!-- Card 1: PJU Mati (Prioritas Tinggi - #A82020) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-tertiary"></div>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+              Prioritas Tinggi
+            </span>
+<span class="font-label-sm text-label-sm text-outline">Tiket #P-104</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Lampu Penerangan Jalan Umum Blok B Mati</h3>
+<div class="relative w-full h-36 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up nighttime photo of a broken street lamp post in a clean residential alley in Indonesia, dim twilight mood with cool teal shadows and warm distant porch light, documentary municipal style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB21tWUS4IdWwqK_MaCmzKdkLqbsQZhiRNgssAVT8ej4RH9sSPW4KRefUK_ZywTf2zJ2gRDj7wWnK8h2KHZAQVcsgofEY9n-ZqOyiWrZ1Vg2fUHIz8Ki4zBFrjILvONPEyWbakSA2W-SSQxXpklsJ7NraIDezhTTmCviWswNSM4UdgWyV2UKTYPfjhTFymM1GhzTO1MzJQlx0IdX2EjsgG0veTIQBf2InlrzeGCTZF4"/>
+<span class="absolute bottom-2 left-2 bg-on-surface/80 text-surface-container-lowest text-[10px] font-label-sm px-2 py-0.5 rounded backdrop-blur-sm">Lampiran Foto Lapangan</span>
+</div>
+<div class="space-y-1 text-body-sm font-body-sm text-on-surface-variant">
+<p><strong class="text-on-surface">Pelapor:</strong> Ibu Endang (Blok B2/04)</p>
+<p><strong class="text-on-surface">Lokasi:</strong> Tiang PJU Depan Masjid Al-Ikhlas</p>
+<p><strong class="text-on-surface">Waktu:</strong> Kemarin, 19:40 WIB</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Petugas Ditugaskan (Sedang Diperbaiki)</span>
+</div>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Sampah Liar (Telah Selesai) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Prioritas Normal
+            </span>
+<span class="font-label-sm text-label-sm text-outline">Tiket #P-098</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Sampah Liar Menumpuk di Gerbang Belakang</h3>
+<div class="relative w-full h-36 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Cleaned outdoor backyard gate area of a modern Indonesian housing cluster, paved street, green foliage, bright daylight, sparkling clean condition after civic community cleanup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTbEDBM0zHBmWiUBHQjn-k8j2KY7ZWd-vz1d7t4nncceXHmJOxyiLzJlpKd15gnujuFrSBCRUxY1sY-lgxjjLG0fO2BHxdnoNS84awmL0r2D7Uo1fIuNtMA8PJEFyryXcXMA7qB6pfi_N_Oe3zPhHTtlIM5w-sjfic7MNMDbimcn2H4HwExxOvx2MfaYjiGXnL1BWqV98MbcAbd-6mHSidzDlcV_J_Z-DqJh6MdkEr"/>
+<span class="absolute bottom-2 left-2 bg-primary/90 text-surface-container-lowest text-[10px] font-label-sm px-2 py-0.5 rounded backdrop-blur-sm">Dokumentasi Pembersihan</span>
+</div>
+<div class="space-y-1 text-body-sm font-body-sm text-on-surface-variant">
+<p><strong class="text-on-surface">Pelapor:</strong> Bpk. Yanto (Blok A1/08)</p>
+<p><strong class="text-on-surface">Petugas:</strong> Tim Kebersihan RW 08</p>
+<p><strong class="text-on-surface">Hasil:</strong> 3 Gerobak sampah dibuang ke TPS</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Telah Ditindaklanjuti &amp; Bersih</span>
+</div>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Pohon Rindang Kabel Listrik (Menunggu Kerja Bakti) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary"></div>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              Prioritas Sedang
+            </span>
+<span class="font-label-sm text-label-sm text-outline">Tiket #P-101</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Pohon Rindang Menghalangi Kabel Listrik Blok C</h3>
+<div class="relative w-full h-36 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Large leafy shade tree branches brushing near neighborhood electrical cables and utility poles along an Indonesian suburban lane, sunny afternoon, civic safety inspection vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLmwsTQ4NfmM1ko5OLla9TxyK6OqnHMEVUdzwBEgSYV3PZuIadXueOGs5yJ13g2eDWLFDBAhuofdEZVmEYK7L8YJt3oNba6RV3v8ge1UIvy-7V62v8Ekc2WVA7rFzOfbzrY_3q7BTLHU11R5oXE-3wy5aoZ-j8_sNPGpnxaPtzrWeXW5L9FklBbdS77jRlJZqIs9uF9SCuQK0lo3KSdZCU3TdkLi-P9_3N_zpm_bYH"/>
+<span class="absolute bottom-2 left-2 bg-on-surface/80 text-surface-container-lowest text-[10px] font-label-sm px-2 py-0.5 rounded backdrop-blur-sm">Posisi Ranting Pohon</span>
+</div>
+<div class="space-y-1 text-body-sm font-body-sm text-on-surface-variant">
+<p><strong class="text-on-surface">Pelapor:</strong> Bpk. Herman (Blok C3/11)</p>
+<p><strong class="text-on-surface">Solusi:</strong> Pemangkasan ranting masal warga</p>
+<p><strong class="text-on-surface">Koordinasi:</strong> Sudah izin petugas PLN UP3</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">group_work</span>
+<span>Menunggu Jadwal Kerja Bakti</span>
+</div>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= SUB-MODUL 3: AGENDA WARGA & JADWAL RONDA ================= -->
+<div class="mt-space-xl flex flex-col gap-space-lg" id="sectionJadwal">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Agenda Mendatang (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Agenda Kegiatan RT</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rencana aksi paguyuban warga</p>
+</div>
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Agenda 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-[10px] uppercase font-bold">MEI</span>
+<span class="font-headline-sm text-headline-sm font-extrabold leading-none">26</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Minggu Pagi • 07:00 WIB</span>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-0.5 rounded-full">Wajib KK</span>
+</div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface mt-0.5">Kerja Bakti Bersih Selokan &amp; Drainase</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Fokus peremajaan saluran air Blok A-D antisipasi genangan hujan lebat. Kumpul di Balai RT 05.</p>
+</div>
+</div>
+<!-- Agenda 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-[10px] uppercase font-bold">MEI</span>
+<span class="font-headline-sm text-headline-sm font-extrabold leading-none">29</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Rabu Pagi • 08:30 WIB</span>
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded-full">Kesehatan</span>
+</div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface mt-0.5">Posyandu Balita &amp; Skrining Lansia</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Imunisasi campak, timbang berat balita, dan cek tensi/gula darah gratis bersama Bidan Puskesmas.</p>
+</div>
+</div>
+<!-- Broadcast Banner -->
+<div class="bg-gradient-to-br from-tertiary/10 to-primary/10 p-space-md rounded-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[24px]">campaign</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Pemberitahuan Keliling</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kirim pengingat via bot WhatsApp warga</span>
+</div>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-label-sm text-label-sm font-bold px-3 py-1.5 rounded-lg shadow-sm" onclick="broadcastAlert()">
+              Kirim Info
+            </button>
+</div>
+</div>
+</div>
+<!-- Matriks Jadwal Ronda Malam (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Matriks Giliran Piket Ronda Malam (Pos Kamling)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Periode aktif: 20 Mei – 26 Mei 2024 • Waktu tugas: 22:00 – 04:30 WIB</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 text-[11px] font-label-sm bg-primary-fixed text-on-primary-fixed-variant px-2 py-1 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Shift Aktif Malam Ini
+            </span>
+</div>
+</div>
+<!-- Tabel Jadwal Ronda -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4">Hari &amp; Tanggal</th>
+<th class="py-3 px-4">Koordinator Regu</th>
+<th class="py-3 px-4">Anggota Piket Warga</th>
+<th class="py-3 px-4 text-center">Status Kehadiran</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm text-on-surface">
+<!-- Senin (Today) -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors">
+<td class="py-3.5 px-4 font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>Senin, 20 Mei</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-bold text-on-surface">Bpk. Hendra (B1/02)</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+                    Dimas Pratama, Irfan Hakim, Joko Susanto, Bayu Anggoro
+                  </td>
+<td class="py-3.5 px-4 text-center">
+<span class="bg-primary text-on-primary px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold">
+                      Siaga Malam Ini
+                    </span>
+</td>
+</tr>
+<!-- Selasa -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-medium">Selasa, 21 Mei</td>
+<td class="py-3.5 px-4 font-semibold">Bpk. Rizal (C1/09)</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+                    Andi Setiawan, Budi Cahyono, Teguh Wibowo, Firman
+                  </td>
+<td class="py-3.5 px-4 text-center">
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full text-label-sm font-label-sm">
+                      Terjadwal
+                    </span>
+</td>
+</tr>
+<!-- Rabu -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-medium">Rabu, 22 Mei</td>
+<td class="py-3.5 px-4 font-semibold">Bpk. Agus Salim (A2/05)</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+                    Dedi Kurnia, Farhan Maulana, Guntur, Hariyanto
+                  </td>
+<td class="py-3.5 px-4 text-center">
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full text-label-sm font-label-sm">
+                      Terjadwal
+                    </span>
+</td>
+</tr>
+<!-- Kamis -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-medium">Kamis, 23 Mei</td>
+<td class="py-3.5 px-4 font-semibold">Bpk. Danang (D2/01)</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+                    Iwan Falsafah, Kemaludin, Lukman Hakim, M. Yusuf
+                  </td>
+<td class="py-3.5 px-4 text-center">
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full text-label-sm font-label-sm">
+                      Terjadwal
+                    </span>
+</td>
+</tr>
+<!-- Jumat -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-medium">Jumat, 24 Mei</td>
+<td class="py-3.5 px-4 font-semibold">Bpk. Lukito (A3/12)</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+                    Noval Reza, Oscar Wardana, Panji Tri, Qomarudin
+                  </td>
+<td class="py-3.5 px-4 text-center">
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full text-label-sm font-label-sm">
+                      Terjadwal
+                    </span>
+</td>
+</tr>
+<!-- Sabtu -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-medium">Sabtu, 25 Mei</td>
+<td class="py-3.5 px-4 font-semibold">Bpk. Slamet (B3/07)</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+                    Rian Hidayat, Soni Prakoso, Taufik Ismail, Untung S.
+                  </td>
+<td class="py-3.5 px-4 text-center">
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full text-label-sm font-label-sm">
+                      Terjadwal
+                    </span>
+</td>
+</tr>
+<!-- Minggu -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-medium">Minggu, 26 Mei</td>
+<td class="py-3.5 px-4 font-semibold">Bpk. Wahyu (C2/14)</td>
+<td class="py-3.5 px-4 text-on-surface-variant">
+                    Vicky Pras, Wildan Ramli, Yoga Pratama, Zaenal Abidin
+                  </td>
+<td class="py-3.5 px-4 text-center">
+<span class="bg-surface-container text-on-surface-variant px-2.5 py-1 rounded-full text-label-sm font-label-sm">
+                      Terjadwal
+                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between text-body-sm font-body-sm text-on-surface-variant gap-2">
+<span class="text-[12px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">warning</span>
+              Warga berhalangan hadir wajib tukar shift / melapor 1x24 jam ke Ketua Sie Keamanan RT.
+            </span>
+<div class="flex items-center gap-2">
+<button class="text-primary hover:underline font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh PDF Jadwal
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container (Floating) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-on-surface text-surface-container-lowest px-4 py-3 rounded-xl shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed" id="toastIcon">check_circle</span>
+<span class="font-body-md text-body-md" id="toastMsg">Surat berhasil diproses.</span>
+</div>
+</div>
+<script>
+  // Simple state machine for document selection
+  const mockLetters = {
+    dimas: {
+      title: "SURAT PENGANTAR PERMOHONAN KTP",
+      no: "Nomor: 045/RT05-RW08/V/2024",
+      name: ": DIMAS PRATAMA",
+      nik: ": 3175081903990001",
+      ttl: ": Jakarta, 19 Maret 1999",
+      alamat: ": Blok A2 No. 3, RT 05 RW 08",
+      keperluan: ": Pengurusan KTP Baru / Perekaman Biometrik Kelurahan"
+    },
+    siti: {
+      title: "SURAT KETERANGAN DOMISILI WARGA",
+      no: "Nomor: 046/RT05-RW08/V/2024",
+      name: ": SITI RAHMA",
+      nik: ": 3275015502940003",
+      ttl: ": Bandung, 15 Februari 1994",
+      alamat: ": Blok B4 No. 10, RT 05 RW 08",
+      keperluan: ": Pembukaan Rekening Bank & Persyaratan Kerja"
+    },
+    reza: {
+      title: "SURAT PENGANTAR NIKAH (MODEL N1-N4)",
+      no: "Nomor: 047/RT05-RW08/V/2024",
+      name: ": REZA PAHLEVI",
+      nik: ": 3175021208920004",
+      ttl: ": Jakarta, 12 Agustus 1992",
+      alamat: ": Blok C2 No. 5, RT 05 RW 08",
+      keperluan: ": Pengantar Pendaftaran Akad Nikah ke KUA Kecamatan"
+    },
+    sktm: {
+      title: "SURAT KETERANGAN TIDAK MAMPU (SKTM)",
+      no: "Nomor: 048/RT05-RW08/V/2024",
+      name: ": MBAH WARSITO",
+      nik: ": 3302090101500002",
+      ttl: ": Banyumas, 01 Januari 1950",
+      alamat: ": Blok D1 No. 02, RT 05 RW 08",
+      keperluan: ": Pengajuan Keringanan UKT Perguruan Tinggi Negeri Cucu"
+    }
+  };
+
+  function selectLetter(element, key) {
+    document.querySelectorAll('.letter-card').forEach(el => {
+      el.classList.remove('ring-2', 'ring-primary');
+      el.classList.remove('bg-surface-container-lowest');
+    });
+    element.classList.add('ring-2', 'ring-primary');
+    
+    const data = mockLetters[key];
+    if (data) {
+      document.getElementById('docTitle').innerText = data.title;
+      document.getElementById('docNumber').innerText = data.no;
+      document.getElementById('docName').innerText = data.name;
+      document.getElementById('docNik').innerText = data.nik;
+      document.getElementById('docTtl').innerText = data.ttl;
+      document.getElementById('docAlamat').innerText = data.alamat;
+      document.getElementById('docKeperluan').innerText = data.keperluan;
+      showToast('Memuat dokumen pemohon: ' + data.name.replace(': ', ''));
+    }
+  }
+
+  function switchModuleTab(target) {
+    const btn1 = document.getElementById('tabBtn1');
+    const btn2 = document.getElementById('tabBtn2');
+    const btn3 = document.getElementById('tabBtn3');
+
+    const resetBtn = (btn) => {
+      btn.className = "flex items-center gap-space-xs px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-lg text-label-lg transition-all duration-200";
+    };
+    const activeBtn = (btn) => {
+      btn.className = "flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm transition-all duration-200";
+    };
+
+    resetBtn(btn1);
+    resetBtn(btn2);
+    resetBtn(btn3);
+
+    const sSurat = document.getElementById('sectionSurat');
+    const sPengaduan = document.getElementById('sectionPengaduan');
+    const sJadwal = document.getElementById('sectionJadwal');
+
+    if (target === 'surat') {
+      activeBtn(btn1);
+      sSurat.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (target === 'pengaduan') {
+      activeBtn(btn2);
+      sPengaduan.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (target === 'jadwal') {
+      activeBtn(btn3);
+      sJadwal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function showToast(msg, isSuccess = true) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMsg');
+    const toastIcon = document.getElementById('toastIcon');
+
+    toastMsg.innerText = msg;
+    toastIcon.innerText = isSuccess ? 'check_circle' : 'info';
+
+    toast.classList.remove('translate-y-32', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-32', 'opacity-0');
+    }, 3200);
+  }
+
+  function approveLetterAlert() {
+    showToast('Surat Resmi berhasil disetujui & e-Signature dibubuhkan!');
+  }
+
+  function printLetterAlert() {
+    showToast('Menyiapkan file PDF resmi siap cetak...');
+  }
+
+  function sendWhatsappAlert() {
+    showToast('Salinan PDF & QR Verifikasi terkirim ke WhatsApp warga!');
+  }
+
+  function broadcastAlert() {
+    showToast('Notifikasi pengingat kegiatan telah disiarkan ke 68 KK RT 05.');
+  }
+</script></main></div></body></html>

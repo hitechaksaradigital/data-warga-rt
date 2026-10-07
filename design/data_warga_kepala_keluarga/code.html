@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#b32827","on-primary-fixed-variant":"#00504f","background":"#fff8f7","inverse-on-surface":"#ffedeb","on-primary-container":"#003938","surface-tint":"#006a69","error":"#ba1a1a","error-container":"#ffdad6","on-secondary":"#ffffff","on-error":"#ffffff","inverse-primary":"#68d8d6","outline":"#6d7979","on-surface":"#410004","on-secondary-container":"#746332","surface-container-lowest":"#ffffff","surface-dim":"#ffcfcb","on-primary":"#ffffff","on-secondary-fixed":"#241a00","surface-variant":"#ffdad7","outline-variant":"#bcc9c8","surface-container-low":"#fff0ef","primary-fixed-dim":"#68d8d6","on-primary-fixed":"#002020","secondary-fixed-dim":"#dbc58b","tertiary-fixed":"#ffdad6","on-surface-variant":"#3d4949","secondary-container":"#f8e0a4","on-error-container":"#93000a","primary":"#006a69","tertiary-fixed-dim":"#ffb4ac","on-tertiary-container":"#6b0007","inverse-surface":"#611113","surface":"#fff8f7","on-background":"#410004","surface-bright":"#fff8f7","primary-container":"#31aaa9","on-tertiary-fixed":"#410003","on-tertiary-fixed-variant":"#900a12","secondary-fixed":"#f8e0a4","surface-container-high":"#ffe2df","secondary":"#6e5d2d","primary-fixed":"#86f4f3","on-tertiary":"#ffffff","surface-container":"#ffe9e7","surface-container-highest":"#ffdad7","tertiary-container":"#ff695f","on-secondary-fixed-variant":"#544518"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","space-md":"1rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.5rem"},fontFamily:{"label-lg":["Inter"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"label-sm":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="RT Digital Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UqqjXiJzHlqkQGXuo5Gwka2mI55J7wgaYZ2R6UqKQuHEX2cR2tWi4dJeviwkQtEkCbwb3GvTkH_qJaM8Ct56IQPrK5STmAP9lg33ZSPo1mjboJb8bboU93GQ-5ha0mqMxHKN3OBlTaGyCkR_Kj90z0nui6goEXupZyraNe5zIRKXzd9DH9hZOjyRjasQ-rfiengjE7xNeQI3-4DHBK0ScatiM-XwulyANBywgJHgl5Ig"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">WargaNet RT 05</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">RW 08 Harmoni Sejahtera</span></div></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span><span class="font-label-sm text-label-sm text-on-surface-variant">Periode Aktif</span></div><span class="font-label-md text-label-md text-primary">Mei 2024</span></div></div><div class="px-space-md mt-space-xs"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Cari warga, KK, iuran..." type="text"/></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><div class="px-space-sm pb-1"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Menu Administrasi</span></div><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-body-md font-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-utama" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard Utama</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="data-warga-kk" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Data Warga &amp; KK</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-body-md font-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="keuangan-iuran" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Keuangan &amp; Iuran</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-body-md font-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="layanan-pengaduan" href="#"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span>Layanan &amp; Pengaduan</span></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="bg-error-container p-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-error text-[20px]">emergency</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-error-container font-bold">Hotline Darurat</span><span class="font-body-sm text-body-sm text-on-error-container">Siaga Kamling 24 Jam</span></div></div><a class="bg-error text-on-error px-2.5 py-1 rounded-full text-label-sm font-label-lg hover:opacity-90 transition-opacity" href="tel:112">Panggil</a></div><div class="mt-space-sm text-center"><span class="font-label-sm text-label-sm text-outline">v2.4 • RT Digital 05 Harmoni</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-primary transition-colors cursor-pointer">Portal RT 05</span><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="text-on-surface font-semibold">Harmoni Sejahtera</span></nav><div class="hidden xl:flex items-center gap-space-xs ml-space-md px-space-sm py-1 bg-secondary-container rounded-full"><span class="material-symbols-outlined text-on-secondary-container text-[16px]">verified</span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Kas Aktif &amp; Terverifikasi</span></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold">3</span></button><div class="h-8 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Bpk. H. Bambang Sutrisno</span><span class="font-label-sm text-label-sm text-on-surface-variant">Ketua RT 05</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtRbA2lPDUgiXZ4-VQRnCImsqfg14gUyfacpQ4HQpcYX359ooduS0TZFg-jp-CWkfuIJ_1wZGuiBAelaxhYDPy-hT4lFR5NxaNcLZieRw5tAEQziGylmDeaFfM4Sxil7LOKda5Yeh4F3LUhsrpfgAdbESxM6KhH4LWXezr-WXhaiF5Gmrqoq-NBsG8Queon_yDAgKdL643m16lwmPFkyaDBy1nBhGl8txOXw8ag70-"/></div></div></header><main class="relative pt-20 w-full min-h-screen bg-surface px-space-margin pb-space-xl"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]">folder_shared</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sistem Administrasi Sipil RW 08</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Master Data Kependudukan &amp; Kepala Keluarga (KK)</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Pendataan terpadu 94 Kepala Keluarga, verifikasi berkas sipil, dan pemetaan demografi warga RT 05.</p>
+</div>
+<!-- Main Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+<span>Filter Lanjutan</span>
+</button>
+<div class="relative group">
+<button class="inline-flex items-center gap-space-xs px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Import / Export Excel</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-space-xs px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 active:scale-[0.99] transition-all shadow-md" onclick="openDrawer('KK 3271012304910001')" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Tambah Data KK Baru</span>
+</button>
+</div>
+</div>
+<!-- Metric & Category Tab Pills -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-2 scrollbar-none">
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-2 shadow-sm whitespace-nowrap" type="button">
+<span>Semua Warga</span>
+<span class="px-2 py-0.5 rounded-full bg-on-primary-container/15 font-label-sm text-label-sm">348</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-2 transition-colors whitespace-nowrap" type="button">
+<span>Kepala Keluarga</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-outline">94</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-2 transition-colors whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">elderly</span>
+<span>Lansia &gt;60 Th</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">14</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-2 transition-colors whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">child_friendly</span>
+<span>Balita</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">8</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-2 transition-colors whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">real_estate_agent</span>
+<span>Warga Kontrak</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-outline">16</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-2 transition-colors whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">accessible</span>
+<span>Kebutuhan Khusus</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">3</span>
+</button>
+</div>
+<!-- Search & Fast Filters Panel -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col lg:flex-row gap-space-md items-stretch lg:items-center justify-between">
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low rounded-lg text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Cari berdasarkan Nama Kepala Keluarga, No. KK, NIK, atau Blok Rumah (mis. A1/04)..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative flex items-center min-w-[170px]">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">home_work</span>
+<select class="w-full pl-9 pr-8 py-2.5 bg-surface-container-low rounded-lg text-body-md font-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer">
+<option value="">Semua Kepemilikan</option>
+<option value="tetap">Rumah Tetap</option>
+<option value="kontrak">Kontrak / Sewa</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+<div class="relative flex items-center min-w-[180px]">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">family_restroom</span>
+<select class="w-full pl-9 pr-8 py-2.5 bg-surface-container-low rounded-lg text-body-md font-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer">
+<option value="">Kategori Rentan</option>
+<option value="lansia">Ada Lansia (&gt;60 th)</option>
+<option value="balita">Ada Balita (0-5 th)</option>
+<option value="disabilitas">Disabilitas / Khusus</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+<div class="relative flex items-center min-w-[160px]">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">verified_user</span>
+<select class="w-full pl-9 pr-8 py-2.5 bg-surface-container-low rounded-lg text-body-md font-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer">
+<option value="">Status Domisili</option>
+<option selected="" value="aktif">Aktif Menetap</option>
+<option value="pindah">Mutasi / Pindah</option>
+<option value="sementara">Domisili Musiman</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+<button class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Reset Filter" type="button">
+<span class="material-symbols-outlined text-[20px]">replay</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Layout (Table & Side Slide-Over Modal) -->
+<div class="relative grid grid-cols-12 gap-space-lg items-start">
+<!-- Table Container (Spans full or 8 cols when drawer opens) -->
+<div class="col-span-12 transition-all duration-300" id="tableContainer">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Action Header Bar -->
+<div class="px-space-lg py-4 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Daftar Induk Kepala Keluarga (KK)</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Menampilkan 4 dari 94 KK</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+<span>Sinkronisasi Dukcapil Terakhir: Hari ini, 08:30 WIB</span>
+</div>
+</div>
+<!-- Scrollable Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-3.5 px-4 font-semibold">No. KK &amp; Kepala Keluarga</th>
+<th class="py-3.5 px-4 font-semibold">Alamat / Blok</th>
+<th class="py-3.5 px-4 font-semibold text-center">Anggota</th>
+<th class="py-3.5 px-4 font-semibold">Kepemilikan</th>
+<th class="py-3.5 px-4 font-semibold">Kontak WA</th>
+<th class="py-3.5 px-4 font-semibold">Status Berkas</th>
+<th class="py-3.5 px-4 font-semibold">Status</th>
+<th class="py-3.5 px-4 font-semibold text-right">Aksi Tindakan</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface">
+<!-- Row 1: H. Bambang Sutrisno -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover flex-shrink-0 shadow-sm" data-alt="Close up portrait photograph of an Indonesian elderly respected community leader wearing formal batik shirt, warm morning light, civic friendly aura, high detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-xPW-_7IUoOGFi0_cDsgJJGztT1ac43fZQRR1WFp_o_DLL3rjVTp9WtiIy_KviYmDWCDO5-piN8RW3tzWrZzb8va7HM4Jhg_ug_a-3O7yKV7TQy94qSuMesBrItquAxmPZuxwXaOLcCnX3sT4mksjF87I3PoipEhvCvofNGUvlOS89oaFjSIjTj-_CoueXPlZlRBafGLTvkBGJdXVYZQgJwW4nPT-JruedhFzqmR"/>
+<div class="flex flex-col min-w-0">
+<button class="text-left font-label-lg text-label-lg text-primary hover:underline font-bold truncate" onclick="showProfile('bambang')" type="button">
+                        H. Bambang Sutrisno
+                      </button>
+<span class="font-body-sm text-body-sm text-outline tracking-tight">KK 3271012304910001</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Blok A1 No. 4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RT 05 / RW 08</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[15px] text-primary">groups</span>
+                    4 Jiwa
+                  </span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">home</span>
+                    Rumah Tetap
+                  </span>
+</td>
+<td class="py-4 px-4">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-medium" href="https://wa.me/628129841234" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    0812-9841-234
+                  </a>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim/40 text-on-primary-fixed font-label-sm text-label-sm font-bold" title="e-KTP Terverifikasi">KTP ✓</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim/40 text-on-primary-fixed font-label-sm text-label-sm font-bold" title="Kartu Keluarga Terverifikasi">KK ✓</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Aktif
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="showProfile('bambang')" title="Lihat Profil Keluarga" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Edit Data" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Cetak Formulir Pengantar" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Budi Santoso (Kontrak) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover flex-shrink-0 shadow-sm" data-alt="Portrait photograph of an Indonesian middle aged male resident wearing casual polo shirt in front of modern suburban housing environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuk1-mIGBFqsFACzAjsxm70a9aNU_UfoGrqtvp7iZfc4XkwHT97LUZuZQq1AFA7D5XLisqO4CI_fNEdXkvlGXlR4HtliCmbsivKO-WUc62bnsa7n14plHi9znR2E-4xT5rktOUZ135VkIsRm4eGdVCy_-Yq7lcJfo5UaPoSkqv3gclHmuycJOIt-nAJfsqIjG8haVeuheVpC_79WYkwwnBqeuR7L6fIS1bCj-C1y63"/>
+<div class="flex flex-col min-w-0">
+<button class="text-left font-label-lg text-label-lg text-primary hover:underline font-bold truncate" onclick="showProfile('budi')" type="button">
+                        Budi Santoso
+                      </button>
+<span class="font-body-sm text-body-sm text-outline tracking-tight">KK 3271015607930005</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Blok B2 No. 12</span>
+<span class="font-body-sm text-body-sm text-tertiary">Sewa Exp: Des 2024</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[15px] text-outline">groups</span>
+                    3 Jiwa
+                  </span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">key</span>
+                    Kontrak
+                  </span>
+</td>
+<td class="py-4 px-4">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-medium" href="https://wa.me/628571120993" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    0857-1120-993
+                  </a>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold" title="KTP Kadaluarsa / Perlu Update">KTP ⚠</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim/40 text-on-primary-fixed font-label-sm text-label-sm font-bold">KK ✓</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Aktif
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="showProfile('budi')" title="Lihat Profil Keluarga" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Edit Data" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Cetak Formulir Pengantar" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Dra. Ratna Kusuma (Lansia Prioritas) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-low/20">
+<td class="py-4 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover flex-shrink-0 shadow-sm" data-alt="Editorial portrait photograph of an Indonesian senior woman wearing glasses and elegant modest hijab, smiling warmly, soft daylight in a living room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjsN788_CyPJFX6W_FSczRRxnTPdnxHtY28geMPYWheWYFty7EMv48554F9XZXdBHF2dGNGnqSDm82xGe5jy9mjULWhK7fHzfr70n-bEkXGdj5gLYS15WiZ6CwdTp5q5vpMU7q2FYIpfzd2tjB6HFzz8jr7QKXY_ji3slXJo85tXvdcEgzPYBOSPTFZnMQg87-aWbxQeQ0V66cQ8FyelYJKE1__VkW_Re9NPQFU5dx"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<button class="text-left font-label-lg text-label-lg text-primary hover:underline font-bold truncate" onclick="showProfile('ratna')" type="button">
+                          Dra. Ratna Kusuma
+                        </button>
+<span class="material-symbols-outlined text-tertiary text-[16px]" title="Memerlukan Perhatian Khusus Evakuasi">flag</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline tracking-tight">KK 3271018809920008</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Blok A3 No. 7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lantai 1 Akses Khusus</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-bold">
+                      2 Jiwa
+                    </span>
+<span class="font-label-sm text-[11px] text-tertiary font-bold mt-0.5">Lansia 72 Th</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">home</span>
+                    Rumah Tetap
+                  </span>
+</td>
+<td class="py-4 px-4">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-medium" href="https://wa.me/628131499021" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    0813-1499-021
+                  </a>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim/40 text-on-primary-fixed font-label-sm text-label-sm font-bold">KTP ✓</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim/40 text-on-primary-fixed font-label-sm text-label-sm font-bold">KK ✓</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Aktif
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="showProfile('ratna')" title="Lihat Profil Keluarga" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Edit Data" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Cetak Formulir Pengantar" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Ahmad Fauzi (Balita) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover flex-shrink-0 shadow-sm" data-alt="Candid portrait photograph of an Indonesian young father in his early thirties with friendly expression and clean neat hair against modern minimalist home background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZLIoEFaFCuEz-DBtWQIj3faa2ntX8oQNSRF43HdcHj_MBis_QPp5AxHRqbJPYCzsgPqRZVyI9m-n61OtkJHS-gyRxSfSRLeWJ2RStv6cF0C4jd88Pj10qjWCeCAGaUnxdC_yyrnuBhUzxJW_bA7BD71VOsJsVh9L8fPfjhtyF8DFJqREU2k1LDhi9vIAg9S-xFsuieEFV78ZWRDiHlChLN7XZ91z_wSl-5m0naZ4V"/>
+<div class="flex flex-col min-w-0">
+<button class="text-left font-label-lg text-label-lg text-primary hover:underline font-bold truncate" onclick="showProfile('ahmad')" type="button">
+                        Ahmad Fauzi
+                      </button>
+<span class="font-body-sm text-body-sm text-outline tracking-tight">KK 3271014401880003</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Blok C1 No. 9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RT 05 / RW 08</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-bold">
+                      5 Jiwa
+                    </span>
+<span class="font-label-sm text-[11px] text-secondary font-bold mt-0.5">Ada Balita 2 Th</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">home</span>
+                    Rumah Tetap
+                  </span>
+</td>
+<td class="py-4 px-4">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md font-medium" href="https://wa.me/6281809228811" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                    0818-0922-881
+                  </a>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim/40 text-on-primary-fixed font-label-sm text-label-sm font-bold">KTP ✓</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed-dim/40 text-on-primary-fixed font-label-sm text-label-sm font-bold">KK ✓</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Aktif
+                  </span>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="showProfile('ahmad')" title="Lihat Profil Keluarga" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Edit Data" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Cetak Formulir Pengantar" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="px-space-lg py-3.5 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span>Baris per halaman:</span>
+<select class="bg-surface-container-lowest text-on-surface rounded px-2 py-1 focus:outline-none">
+<option>10</option>
+<option selected="">20</option>
+<option>50</option>
+</select>
+<span>Menampilkan 1 - 4 dari 94 Kepala Keluarga</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">1</span>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm transition-colors">2</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm transition-colors">3</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm transition-colors">5</button>
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Slide-Over Modal / Profile Panel (Detailed View) -->
+<div class="hidden col-span-12 xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-xl flex flex-col p-space-lg transition-all animate-in fade-in duration-200" id="sideProfileDrawer">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Profil Keluarga</span>
+</div>
+<button class="p-1.5 rounded-full hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors" onclick="closeDrawer()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Quick Summary Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low my-space-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Rumah Tetap</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1" id="drawerHeadName">Dra. Ratna Kusuma</h2>
+<p class="font-body-sm text-body-sm text-outline" id="drawerNoKK">No. KK: 3271018809920008</p>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-primary font-bold">Blok A3 / 07</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">RT 05 / RW 08</p>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Status Iuran Kas: <strong class="text-primary font-bold">Lunas (Mei 2024)</strong></span>
+<a class="text-primary font-semibold flex items-center gap-1 hover:underline" href="https://wa.me/628131499021">
+<span class="material-symbols-outlined text-[15px]">chat</span> WhatsApp
+          </a>
+</div>
+</div>
+<!-- Vulnerability / Disaster Warning Badge -->
+<div class="p-space-sm rounded-lg bg-tertiary-fixed text-on-tertiary-fixed mb-space-md flex items-start gap-space-xs shadow-sm" id="drawerDisasterBox">
+<span class="material-symbols-outlined text-tertiary text-[20px] flex-shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-tertiary-fixed-variant">Protokol Siaga &amp; Tanggap Bencana</span>
+<p class="font-body-sm text-body-sm leading-snug">Lansia pengguna kursi roda di kamar lantai 1. Memerlukan pendampingan relawan Kamling saat evakuasi darurat atau banjir.</p>
+</div>
+</div>
+<!-- Family Members List Accordion/Table -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Daftar Anggota Keluarga (2 Jiwa)</span>
+<button class="text-primary font-label-sm text-label-sm hover:underline font-semibold">+ Tambah Anggota</button>
+</div>
+<!-- Member 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold">Kepala</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Dra. Ratna Kusuma</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Gol. Darah: O+</span>
+</div>
+<div class="grid grid-cols-2 text-body-sm font-body-sm text-on-surface-variant pt-1">
+<span>NIK: 3271018809920008</span>
+<span class="text-right">Usia: 72 Th (Lansia)</span>
+<span>Pekerjaan: Pensiunan PNS</span>
+<span class="text-right text-primary font-semibold">e-KTP Terverifikasi</span>
+</div>
+</div>
+<!-- Member 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px] font-bold">Anak</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Dian Permata Sari, S.Kom</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Gol. Darah: B+</span>
+</div>
+<div class="grid grid-cols-2 text-body-sm font-body-sm text-on-surface-variant pt-1">
+<span>NIK: 3271016503950002</span>
+<span class="text-right">Usia: 29 Th</span>
+<span>Pekerjaan: Karyawan Swasta</span>
+<span class="text-right text-primary font-semibold">e-KTP Terverifikasi</span>
+</div>
+</div>
+</div>
+<!-- Digital Document Gallery -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Galeri Berkas Digital Resmi</span>
+<span class="font-label-sm text-label-sm text-primary">Terenkripsi Cloud RT</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Document 1: KTP -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5 group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="h-20 w-full rounded bg-surface-container-high overflow-hidden flex items-center justify-center relative">
+<span class="material-symbols-outlined text-outline text-[32px] group-hover:scale-110 transition-transform">badge</span>
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 bg-primary text-on-primary rounded text-[9px] font-bold">PDF</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface truncate">e-KTP Ratna Kusuma</span>
+<span class="font-body-sm text-[10px] text-outline">Diperbarui 12 Jan 2024</span>
+</div>
+</div>
+<!-- Document 2: Kartu Keluarga -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5 group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="h-20 w-full rounded bg-surface-container-high overflow-hidden flex items-center justify-center relative">
+<span class="material-symbols-outlined text-outline text-[32px] group-hover:scale-110 transition-transform">description</span>
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 bg-secondary text-on-secondary rounded text-[9px] font-bold">SCAN</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface truncate">Kartu Keluarga (Asli)</span>
+<span class="font-body-sm text-[10px] text-outline">Format Barcode Dukcapil</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer for Drawer -->
+<div class="mt-auto pt-space-sm flex items-center gap-space-xs">
+<button class="flex-1 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 transition-opacity text-center font-bold" type="button">
+          Sunting Data KK
+        </button>
+<button class="p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Download ZIP Arsip" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Cetak Kartu Warga" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Subtle Demographic Graphic Summary Footer Strip -->
+<div class="mt-space-xl p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">query_stats</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Komposisi Penduduk RT 05</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Laki-laki: 178 jiwa (51%) • Perempuan: 170 jiwa (49%) • Warga Usia Produktif: 74%</span>
+</div>
+</div>
+<!-- Inline SVG Mini Bar Distribution Graph -->
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-outline">Kelengkapan e-KTP Lingkungan</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">98.2%</span>
+</div>
+<div class="w-36 h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 98%;"></div>
+<div class="bg-error h-full" style="width: 2%;"></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function showProfile(id) {
+    const drawer = document.getElementById('sideProfileDrawer');
+    const tableContainer = document.getElementById('tableContainer');
+    
+    if (drawer) {
+      drawer.classList.remove('hidden');
+      if (tableContainer) {
+        tableContainer.classList.remove('col-span-12');
+        tableContainer.classList.add('xl:col-span-8');
+      }
+      
+      const headName = document.getElementById('drawerHeadName');
+      const noKK = document.getElementById('drawerNoKK');
+      const disasterBox = document.getElementById('drawerDisasterBox');
+      
+      if (id === 'bambang') {
+        headName.textContent = 'H. Bambang Sutrisno';
+        noKK.textContent = 'No. KK: 3271012304910001';
+        disasterBox.classList.add('hidden');
+      } else if (id === 'budi') {
+        headName.textContent = 'Budi Santoso';
+        noKK.textContent = 'No. KK: 3271015607930005';
+        disasterBox.classList.add('hidden');
+      } else if (id === 'ahmad') {
+        headName.textContent = 'Ahmad Fauzi';
+        noKK.textContent = 'No. KK: 3271014401880003';
+        disasterBox.classList.remove('hidden');
+        disasterBox.querySelector('p').textContent = 'Keluarga memiliki 1 balita (2 tahun). Terdaftar dalam pemantauan rutin gizi & Posyandu Melati bulanan.';
+      } else {
+        headName.textContent = 'Dra. Ratna Kusuma';
+        noKK.textContent = 'No. KK: 3271018809920008';
+        disasterBox.classList.remove('hidden');
+        disasterBox.querySelector('p').textContent = 'Lansia kursi roda di kamar lantai 1. Memerlukan pendampingan relawan Kamling saat evakuasi darurat atau banjir.';
+      }
+      
+      drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('sideProfileDrawer');
+    const tableContainer = document.getElementById('tableContainer');
+    if (drawer) {
+      drawer.classList.add('hidden');
+    }
+    if (tableContainer) {
+      tableContainer.classList.remove('xl:col-span-8');
+      tableContainer.classList.add('col-span-12');
+    }
+  }
+
+  function openDrawer(kk) {
+    showProfile('ratna');
+  }
+</script></main></div></body></html>
