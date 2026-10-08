@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react'
+
 export function FilterSelect({ icon, value, onChange, children, minWidth = 'min-w-[170px]' }) {
   return (
     <div className={`relative flex items-center ${minWidth}`}>
@@ -14,7 +16,19 @@ export function FilterSelect({ icon, value, onChange, children, minWidth = 'min-
   )
 }
 
-export function WargaRow({ warga, onShow }) {
+export function WargaRow({ warga, onShow, onEdit, onDelete }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+
+  useEffect(() => {
+    if (!menuOpen) return
+    function close(e) {
+      if (menuRef.current && !menuRef.current.contains(e.target)) setMenuOpen(false)
+    }
+    document.addEventListener('mousedown', close)
+    return () => document.removeEventListener('mousedown', close)
+  }, [menuOpen])
+
   return (
     <tr className={`hover:bg-surface-container-low/60 transition-colors group ${warga.highlight ? 'bg-surface-container-low/20' : ''}`}>
       <td className="py-4 px-4">
@@ -80,9 +94,31 @@ export function WargaRow({ warga, onShow }) {
           <button className="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onClick={() => onShow(warga.id)} title="Lihat Profil Keluarga" type="button">
             <span className="material-symbols-outlined text-[20px]">visibility</span>
           </button>
-          <button className="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Edit Data" type="button">
-            <span className="material-symbols-outlined text-[20px]">edit</span>
-          </button>
+          <div className="relative" ref={menuRef}>
+            <button className="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" onClick={() => setMenuOpen((v) => !v)} title="Menu tindakan" type="button">
+              <span className="material-symbols-outlined text-[20px]">more_vert</span>
+            </button>
+            {menuOpen && (
+              <div className="absolute right-0 top-full mt-1 w-44 rounded-xl bg-surface-container-lowest shadow-xl border border-surface-container-low overflow-hidden z-30 text-left">
+                <button
+                  className="w-full flex items-center gap-2 px-3.5 py-2.5 text-body-md font-body-md text-on-surface hover:bg-surface-container-low transition-colors"
+                  onClick={() => { setMenuOpen(false); onEdit(warga.id) }}
+                  type="button"
+                >
+                  <span className="material-symbols-outlined text-[18px] text-primary">edit</span>
+                  Ubah Data
+                </button>
+                <button
+                  className="w-full flex items-center gap-2 px-3.5 py-2.5 text-body-md font-body-md text-tertiary hover:bg-error-container/50 transition-colors"
+                  onClick={() => { setMenuOpen(false); onDelete(warga.id) }}
+                  type="button"
+                >
+                  <span className="material-symbols-outlined text-[18px]">delete</span>
+                  Hapus Data
+                </button>
+              </div>
+            )}
+          </div>
           <button className="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Cetak Formulir Pengantar" type="button">
             <span className="material-symbols-outlined text-[20px]">print</span>
           </button>

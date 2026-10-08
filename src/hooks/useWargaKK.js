@@ -75,5 +75,35 @@ export function useWargaKK() {
     return kk
   }, [fetchAll])
 
-  return { rows, loading, error, source, refetch: fetchAll, addKK }
+  const updateKK = useCallback(async (id, payload) => {
+    if (!isSupabaseConfigured) {
+      setRows((prev) => prev.map((w) => (w.id === id
+        ? { ...w, nama: payload.nama, blok: payload.blok, blokShort: payload.blokShort || payload.blok, wa: payload.wa || '-', kepemilikan: payload.kepemilikan, kepemilikanLabel: payload.kepemilikan === 'tetap' ? 'Rumah Tetap' : 'Kontrak', subAlamat: payload.subAlamat || w.subAlamat }
+        : w)))
+      return
+    }
+    const { error: upErr } = await supabase.from('kepala_keluarga').update({
+      nama_kepala: payload.nama, blok: payload.blok,
+      blok_short: payload.blokShort || payload.blok, sub_alamat: payload.subAlamat || 'RT 05 / RW 08',
+      kepemilikan: payload.kepemilikan, wa: payload.wa,
+    }).eq('id', id)
+    if (upErr) throw upErr
+    const headNik = payload.nik
+    if (headNik && /^[0-9]{16}$/.test(headNik)) {
+      await supabase.from('anggota_keluarga').update({ nama: payload.nama }).eq('kk_id', id).eq('hubungan', 'Kepala')
+    }
+    await fetchAll()
+  }, [fetchAll])
+
+  const deleteKK = useCallback(async (id) => {
+    if (!isSupabaseConfigured) {
+      setRows((prev) => prev.filter((w) => w.id !== id))
+      return
+    }
+    const { error: delErr } = await supabase.from('kepala_keluarga').delete().eq('id', id)
+    if (delErr) throw delErr
+    await fetchAll()
+  }, [fetchAll])
+
+  return { rows, loading, error, source, refetch: fetchAll, addKK, updateKK, deleteKK }
 }

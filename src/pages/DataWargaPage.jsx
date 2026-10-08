@@ -3,17 +3,26 @@ import { WARGA_TABS } from '../data/warga'
 import { useWargaKK } from '../hooks/useWargaKK'
 import { FilterSelect, WargaRow } from './datawarga/parts'
 import { ProfileDrawer } from './datawarga/ProfileDrawer'
-import { AddKKModal } from './datawarga/AddKKModal'
+import { KKModal } from './datawarga/AddKKModal'
+import { DeleteConfirm } from './datawarga/DeleteConfirm'
 import DemografiChart from './datawarga/DemografiChart'
 
 export default function DataWargaPage() {
-  const { rows, loading, error, source, addKK } = useWargaKK()
+  const { rows, loading, error, source, addKK, updateKK, deleteKK } = useWargaKK()
   const [tab, setTab] = useState('semua')
   const [search, setSearch] = useState('')
   const [kepemilikan, setKepemilikan] = useState('')
   const [rentan, setRentan] = useState('')
   const [selectedId, setSelectedId] = useState(null)
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalMode, setModalMode] = useState(null)
+  const [editId, setEditId] = useState(null)
+  const [deleteId, setDeleteId] = useState(null)
+  const [toast, setToast] = useState(null)
+
+  function notify(msg) {
+    setToast(msg)
+    setTimeout(() => setToast(null), 3200)
+  }
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
@@ -52,7 +61,7 @@ export default function DataWargaPage() {
             <span>Import / Export Excel</span>
             <span className="material-symbols-outlined text-[16px] text-outline">expand_more</span>
           </button>
-          <button className="inline-flex items-center gap-space-xs px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 active:scale-[0.99] transition-all shadow-md" onClick={() => setModalOpen(true)} type="button">
+          <button className="inline-flex items-center gap-space-xs px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 active:scale-[0.99] transition-all shadow-md" onClick={() => { setModalMode('add'); setEditId(null) }} type="button">
             <span className="material-symbols-outlined text-[20px]">person_add</span>
             <span>Tambah Data KK Baru</span>
           </button>
@@ -139,7 +148,7 @@ export default function DataWargaPage() {
                     </tr>
                   )}
                   {!loading && filtered.map((w) => (
-                    <WargaRow key={w.id} warga={w} onShow={setSelectedId} />
+                    <WargaRow key={w.id} warga={w} onShow={setSelectedId} onEdit={(id) => { setEditId(id); setModalMode('edit') }} onDelete={(id) => setDeleteId(id)} />
                   ))}
                   {!loading && filtered.length === 0 && (
                     <tr>
@@ -151,10 +160,31 @@ export default function DataWargaPage() {
             </div>
           </div>
         </div>
-        {drawerOpen && <ProfileDrawer warga={selected} onClose={() => setSelectedId(null)} />}
+        {drawerOpen && <ProfileDrawer warga={selected} onClose={() => setSelectedId(null)} onEdit={(id) => { setEditId(id); setModalMode('edit') }} />}
       </div>
       <DemografiChart />
-      <AddKKModal open={modalOpen} onClose={() => setModalOpen(false)} onSubmit={addKK} />
+      {toast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[80] px-4 py-2.5 rounded-full bg-on-surface text-surface font-label-md text-label-md shadow-xl flex items-center gap-2">
+          <span className="material-symbols-outlined text-[18px]">check_circle</span>
+          {toast}
+        </div>
+      )}
+      <KKModal
+        open={modalMode !== null}
+        mode={modalMode || 'add'}
+        warga={rows.find((w) => w.id === editId) || null}
+        onClose={() => { setEditId(null); setModalMode(null) }}
+        onSubmit={async (form) => {
+          if (modalMode === 'edit' && editId) { await updateKK(editId, form); setEditId(null); setModalMode(null); notify('Perubahan KK tersimpan.') }
+          else { await addKK(form); setModalMode(null); notify('KK baru tersimpan.') }
+        }}
+      />
+      <DeleteConfirm
+        open={deleteId !== null}
+        warga={rows.find((w) => w.id === deleteId) || null}
+        onClose={() => setDeleteId(null)}
+        onConfirm={async (id) => { await deleteKK(id); if (selectedId === id) setSelectedId(null); setDeleteId(null); notify('Data KK dihapus.') }}
+      />
     </div>
   )
 }

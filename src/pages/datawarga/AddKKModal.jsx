@@ -1,22 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const initial = { noKK: '', nik: '', nama: '', blok: '', wa: '', kepemilikan: 'tetap', pekerjaan: '', subAlamat: 'RT 05 / RW 08' }
+const empty = { noKK: '', nik: '', nama: '', blok: '', wa: '', kepemilikan: 'tetap', pekerjaan: '', subAlamat: 'RT 05 / RW 08' }
 
-export function AddKKModal({ open, onClose, onSubmit }) {
-  const [form, setForm] = useState(initial)
+function useKKForm(warga, mode) {
+  const [form, setForm] = useState(empty)
+  useEffect(() => {
+    if (mode === 'edit' && warga) {
+      setForm({
+        noKK: warga.noKKPlain || '', nik: warga.members?.[0]?.nik || '',
+        nama: warga.nama || '', blok: warga.blok || '', wa: warga.wa === '-' ? '' : warga.wa || '',
+        kepemilikan: warga.kepemilikan || 'tetap', pekerjaan: warga.members?.[0]?.pekerjaan || '',
+        subAlamat: warga.subAlamat || 'RT 05 / RW 08',
+      })
+    } else { setForm(empty) }
+  }, [mode, warga])
+  return [form, setForm]
+}
+
+export function KKModal({ open, mode = 'add', warga = null, onClose, onSubmit }) {
+  const [form, setForm] = useKKForm(warga, mode)
   const [saving, setSaving] = useState(false)
   const [err, setErr] = useState(null)
 
   if (!open) return null
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
+  const isEdit = mode === 'edit'
 
   async function handleSubmit(e) {
     e.preventDefault(); setErr(null)
     if (!/^[0-9]{16}$/.test(form.noKK)) { setErr('No. KK harus 16 digit angka.'); return }
-    if (!/^[0-9]{16}$/.test(form.nik)) { setErr('NIK kepala keluarga harus 16 digit angka.'); return }
     if (!form.nama.trim() || !form.blok.trim()) { setErr('Nama dan Blok wajib diisi.'); return }
+    if (!isEdit && !/^[0-9]{16}$/.test(form.nik)) { setErr('NIK kepala keluarga harus 16 digit angka.'); return }
     setSaving(true)
-    try { await onSubmit(form); setForm(initial); onClose() }
+    try { await onSubmit(form); onClose() }
     catch (ex) { setErr(ex.message) }
     finally { setSaving(false) }
   }
@@ -26,7 +42,7 @@ export function AddKKModal({ open, onClose, onSubmit }) {
       <div className="absolute inset-0 bg-on-surface/40" onClick={onClose} />
       <form onSubmit={handleSubmit} className="relative w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-3 max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between">
-          <h2 className="font-headline-md text-headline-md text-on-surface">Tambah Data KK Baru</h2>
+          <h2 className="font-headline-md text-headline-md text-on-surface">{isEdit ? 'Ubah Data KK' : 'Tambah Data KK Baru'}</h2>
           <button type="button" onClick={onClose} className="p-1.5 rounded-full hover:bg-surface-container-low" aria-label="Tutup">
             <span className="material-symbols-outlined text-[20px]">close</span>
           </button>
@@ -70,10 +86,12 @@ export function AddKKModal({ open, onClose, onSubmit }) {
         <div className="flex items-center justify-end gap-2 pt-2">
           <button type="button" onClick={onClose} className="px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high font-label-lg text-label-lg">Batal</button>
           <button type="submit" disabled={saving} className="px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 disabled:opacity-50">
-            {saving ? 'Menyimpan...' : 'Simpan ke Supabase'}
+            {saving ? 'Menyimpan...' : isEdit ? 'Simpan Perubahan' : 'Simpan ke Supabase'}
           </button>
         </div>
       </form>
     </div>
   )
 }
+
+export const AddKKModal = KKModal

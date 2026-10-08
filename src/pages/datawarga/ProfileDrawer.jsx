@@ -1,4 +1,4 @@
-export function ProfileDrawer({ warga, onClose }) {
+export function ProfileDrawer({ warga, onClose, onEdit }) {
   if (!warga) return null
   return (
     <div className="col-span-12 xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-xl flex flex-col p-space-lg">
@@ -87,7 +87,7 @@ export function ProfileDrawer({ warga, onClose }) {
         </div>
       </div>
       <div className="mt-auto pt-space-sm flex items-center gap-space-xs">
-        <button className="flex-1 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 transition-opacity text-center font-bold" type="button">
+        <button className="flex-1 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-95 transition-opacity text-center font-bold" type="button" onClick={() => onEdit && onEdit(warga.id)}>
           Sunting Data KK
         </button>
         <button className="p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Download ZIP Arsip" type="button">
