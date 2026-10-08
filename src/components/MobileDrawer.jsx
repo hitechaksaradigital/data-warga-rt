@@ -1,8 +1,12 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { NAV_ITEMS } from '../data/dashboard'
+import { useAuth } from '../context/AuthContext'
 
 export default function MobileDrawer({ open, onClose, query, setQuery }) {
+  const { signOut } = useAuth()
+  const navigate = useNavigate()
   if (!open) return null
+  async function handleLogout() { await signOut(); onClose(); navigate('/login', { replace: true }) }
   return (
     <div className="fixed inset-0 z-[60] lg:hidden">
       <div className="absolute inset-0 bg-on-surface/40" onClick={onClose} />
@@ -33,6 +37,9 @@ export default function MobileDrawer({ open, onClose, query, setQuery }) {
           </nav>
         </div>
         <div className="p-space-md">
+          <button onClick={handleLogout} className="w-full mb-2 py-2.5 rounded-lg bg-surface-container-low font-semibold text-[13px] flex items-center justify-center gap-2" type="button">
+            <span className="material-symbols-outlined text-[18px]">logout</span> Keluar Akun
+          </button>
           <div className="bg-error-container p-space-sm rounded-lg flex items-center justify-between">
             <span className="font-label-sm text-label-sm text-on-error-container font-bold">Hotline Darurat</span>
             <a className="bg-error text-on-error px-2.5 py-1 rounded-full text-label-sm" href="tel:112">Panggil</a>

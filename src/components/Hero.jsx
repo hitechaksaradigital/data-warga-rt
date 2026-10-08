@@ -1,4 +1,8 @@
+import { useAuth } from '../context/AuthContext'
+
 export default function Hero() {
+  const { user } = useAuth()
+  const nama = user?.user_metadata?.nama || user?.email?.split('@')[0] || 'Pengurus'
   return (
     <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
       <div className="flex flex-col gap-1">
@@ -10,7 +14,7 @@ export default function Hero() {
           <span className="font-label-sm text-label-sm text-on-surface-variant">Harmoni Sejahtera</span>
         </div>
         <h1 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">
-          Selamat Datang, Pak Bambang
+          Selamat Datang, {nama}
         </h1>
         <p className="font-body-md text-body-md text-on-surface-variant">
           Berikut ringkasan operasional kependudukan, keuangan, dan ketertiban malam ini.

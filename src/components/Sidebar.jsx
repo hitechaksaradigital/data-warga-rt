@@ -1,7 +1,11 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { NAV_ITEMS } from '../data/dashboard'
+import { useAuth } from '../context/AuthContext'
 
 export default function Sidebar({ query, setQuery }) {
+  const { user, signOut } = useAuth()
+  const navigate = useNavigate()
+  async function handleLogout() { await signOut(); navigate('/login', { replace: true }) }
   return (
     <aside className="fixed left-0 top-0 hidden h-full w-72 flex-col justify-between bg-surface-container-lowest shadow-card z-50 lg:flex">
       <div className="flex flex-col overflow-y-auto">
@@ -68,6 +72,12 @@ export default function Sidebar({ query, setQuery }) {
       </div>
 
       <div className="p-space-md bg-surface-container-lowest">
+        <div className="flex items-center justify-between px-1 pb-2">
+          <span className="font-label-sm text-label-sm text-outline truncate max-w-[150px]">{user?.email || 'Pengurus'}</span>
+          <button onClick={handleLogout} className="inline-flex items-center gap-1 text-[12px] font-semibold text-error hover:underline" type="button">
+            <span className="material-symbols-outlined text-[16px]">logout</span> Keluar
+          </button>
+        </div>
         <div className="bg-error-container p-space-sm rounded-lg flex items-center justify-between">
           <div className="flex items-center gap-space-xs">
             <span className="material-symbols-outlined text-error text-[20px]">emergency</span>

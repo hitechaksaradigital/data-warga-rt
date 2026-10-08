@@ -1,4 +1,14 @@
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+
 export default function Header({ onMenu }) {
+  const { user, signOut } = useAuth()
+  const navigate = useNavigate()
+  const nama = user?.user_metadata?.nama || user?.email?.split('@')[0] || 'Pengurus'
+  async function handleLogout() {
+    await signOut()
+    navigate('/login', { replace: true })
+  }
   return (
     <header className="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-card z-40 px-4 lg:px-space-margin flex items-center justify-between">
       <div className="flex items-center gap-space-sm">
@@ -36,15 +46,16 @@ export default function Header({ onMenu }) {
         <div className="flex items-center gap-space-sm pl-space-xs">
           <div className="hidden sm:flex flex-col text-right">
             <span className="font-label-lg text-label-lg text-on-surface font-bold leading-tight">
-              Bpk. H. Bambang Sutrisno
+              {nama}
             </span>
-            <span className="font-label-sm text-label-sm text-on-surface-variant">Ketua RT 05</span>
+            <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[180px]">{user?.email || 'Pengurus RT 05'}</span>
           </div>
-          <img
-            alt="Profile"
-            className="w-8 h-8 rounded-full object-cover shadow-sm"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtRbA2lPDUgiXZ4-VQRnCImsqfg14gUyfacpQ4HQpcYX359ooduS0TZFg-jp-CWkfuIJ_1wZGuiBAelaxhYDPy-hT4lFR5NxaNcLZieRw5tAEQziGylmDeaFfM4Sxil7LOKda5Yeh4F3LUhsrpfgAdbESxM6KhH4LWXezr-WXhaiF5Gmrqoq-NBsG8Queon_yDAgKdL643m16lwmPFkyaDBy1nBhGl8txOXw8ag70-"
-          />
+          <div className="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[13px]">
+            {nama.charAt(0).toUpperCase()}
+          </div>
+          <button onClick={handleLogout} title="Keluar" className="p-2 rounded-full text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+            <span className="material-symbols-outlined text-[20px]">logout</span>
+          </button>
         </div>
       </div>
     </header>
